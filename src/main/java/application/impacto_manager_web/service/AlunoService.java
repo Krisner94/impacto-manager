@@ -5,7 +5,6 @@ import application.impacto_manager_web.model.Aluno;
 import application.impacto_manager_web.model.AlunoGenerated;
 import application.impacto_manager_web.model.Endereco;
 import application.impacto_manager_web.model.Responsavel;
-import application.impacto_manager_web.repository.AlunoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;

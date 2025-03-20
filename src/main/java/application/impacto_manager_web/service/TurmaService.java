@@ -7,7 +7,6 @@ import application.impacto_manager_web.model.HorarioAula;
 import application.impacto_manager_web.model.Professor;
 import application.impacto_manager_web.model.Turma;
 import application.impacto_manager_web.model.TurmaGenerated;
-import application.impacto_manager_web.repository.TurmaRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;

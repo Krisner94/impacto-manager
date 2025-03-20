@@ -6,7 +6,6 @@ import application.impacto_manager_web.exceptions.Error;
 import application.impacto_manager_web.mapper.TurmaMapper;
 import application.impacto_manager_web.model.Turma;
 import application.impacto_manager_web.model.TurmaGenerated;
-import application.impacto_manager_web.repository.TurmaRepository;
 import application.impacto_manager_web.service.TurmaService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
