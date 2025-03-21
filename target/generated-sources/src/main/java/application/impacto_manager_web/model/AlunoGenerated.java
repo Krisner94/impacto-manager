@@ -18,12 +18,12 @@ import jakarta.validation.constraints.*;
  * AlunoGenerated
  */
 @Validated
-@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-19T15:52:55.998221102-03:00[America/Sao_Paulo]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-20T23:24:55.977796988-03:00[America/Sao_Paulo]")
 
 
 public class AlunoGenerated   {
   @JsonProperty("id")
-  private String id = null;
+  private Long id = null;
 
   @JsonProperty("nome")
   private String nome = null;
@@ -77,7 +77,7 @@ public class AlunoGenerated   {
   @Valid
   private List<ResponsavelGenerated> responsavel = null;
 
-  public AlunoGenerated id(String id) {
+  public AlunoGenerated id(Long id) {
     this.id = id;
     return this;
   }
@@ -88,11 +88,11 @@ public class AlunoGenerated   {
    **/
   @Schema(description = "")
   
-    public String getId() {
+    public Long getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(Long id) {
     this.id = id;
   }
 

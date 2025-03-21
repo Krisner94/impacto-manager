@@ -21,8 +21,8 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-03-19T16:31:52-0300",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.6 (Oracle Corporation)"
+    date = "2025-03-20T23:25:00-0300",
+    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.6 (Amazon.com Inc.)"
 )
 public class TurmaMapperImpl implements TurmaMapper {
 
@@ -84,6 +84,7 @@ public class TurmaMapperImpl implements TurmaMapper {
 
         HorarioAulaGenerated horarioAulaGenerated = new HorarioAulaGenerated();
 
+        horarioAulaGenerated.setId( horarioAula.getId() );
         horarioAulaGenerated.setHorarioInicio( horarioAula.getHorarioInicio() );
         horarioAulaGenerated.setHorarioFim( horarioAula.getHorarioFim() );
 
@@ -98,6 +99,7 @@ public class TurmaMapperImpl implements TurmaMapper {
 
         DiaDeAulaGenerated diaDeAulaGenerated = new DiaDeAulaGenerated();
 
+        diaDeAulaGenerated.setId( diaDeAula.getId() );
         diaDeAulaGenerated.setDia( diaDeAula.getDia() );
 
         return diaDeAulaGenerated;
@@ -256,6 +258,7 @@ public class TurmaMapperImpl implements TurmaMapper {
 
         HorarioAula.HorarioAulaBuilder horarioAula = HorarioAula.builder();
 
+        horarioAula.id( horarioAulaGenerated.getId() );
         horarioAula.horarioInicio( horarioAulaGenerated.getHorarioInicio() );
         horarioAula.horarioFim( horarioAulaGenerated.getHorarioFim() );
 
@@ -282,6 +285,7 @@ public class TurmaMapperImpl implements TurmaMapper {
 
         DiaDeAula.DiaDeAulaBuilder diaDeAula = DiaDeAula.builder();
 
+        diaDeAula.id( diaDeAulaGenerated.getId() );
         diaDeAula.dia( diaDeAulaGenerated.getDia() );
 
         return diaDeAula.build();

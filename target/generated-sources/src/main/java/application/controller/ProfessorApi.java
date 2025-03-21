@@ -40,7 +40,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-19T15:52:55.998221102-03:00[America/Sao_Paulo]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-20T23:24:55.977796988-03:00[America/Sao_Paulo]")
 @Validated
 public interface ProfessorApi {
 
@@ -74,7 +74,7 @@ public interface ProfessorApi {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"turma\" : [ null, null ]\n}", ProfessorGenerated.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"turma\" : [ null, null ]\n}", ProfessorGenerated.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -99,7 +99,7 @@ public interface ProfessorApi {
     @RequestMapping(value = "/professor/{id}",
         produces = { "application/json" }, 
         method = RequestMethod.DELETE)
-    default ResponseEntity<Void> deleteProfessor(@Parameter(in = ParameterIn.PATH, description = "", required=true, schema=@Schema()) @PathVariable("id") String id
+    default ResponseEntity<Void> deleteProfessor(@Parameter(in = ParameterIn.PATH, description = "", required=true, schema=@Schema()) @PathVariable("id") Long id
 ) {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
         } else {
@@ -121,7 +121,36 @@ public interface ProfessorApi {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("[ {\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"turma\" : [ null, null ]\n}, {\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"turma\" : [ null, null ]\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("[ {\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"turma\" : [ null, null ]\n}, {\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"turma\" : [ null, null ]\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
+                } catch (IOException e) {
+                    log.error("Couldn't serialize response for content type application/json", e);
+                    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+                }
+            }
+        } else {
+            log.warn("ObjectMapper or HttpServletRequest not configured in default ProfessorApi interface so no example is generated");
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    }
+
+
+    @Operation(summary = "Buscar alunos por nome", description = "", tags={ "Professor" })
+    @ApiResponses(value = { 
+        @ApiResponse(responseCode = "200", description = "OK", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ProfessorGenerated.class))),
+        
+        @ApiResponse(responseCode = "400", description = "Requisição inválida.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorResponseGenerated.class))),
+        
+        @ApiResponse(responseCode = "404", description = "Professor não encontrado.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorResponseGenerated.class))),
+        
+        @ApiResponse(responseCode = "500", description = "Erro interno do servidor.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorResponseGenerated.class))) })
+    @RequestMapping(value = "/professor/{id}",
+        produces = { "application/json" }, 
+        method = RequestMethod.GET)
+    default ResponseEntity<ProfessorGenerated> getProfessorById() {
+        if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
+            if (getAcceptHeader().get().contains("application/json")) {
+                try {
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"turma\" : [ null, null ]\n}", ProfessorGenerated.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -151,7 +180,7 @@ public interface ProfessorApi {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("[ {\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"turma\" : [ null, null ]\n}, {\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"turma\" : [ null, null ]\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("[ {\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"turma\" : [ null, null ]\n}, {\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"turma\" : [ null, null ]\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -182,7 +211,7 @@ public interface ProfessorApi {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"turma\" : [ null, null ]\n}", ProfessorGenerated.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"turma\" : [ null, null ]\n}", ProfessorGenerated.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

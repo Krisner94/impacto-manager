@@ -12,15 +12,37 @@ import jakarta.validation.constraints.*;
  * HorarioAulaGenerated
  */
 @Validated
-@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-19T15:52:55.998221102-03:00[America/Sao_Paulo]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-20T23:24:55.977796988-03:00[America/Sao_Paulo]")
 
 
 public class HorarioAulaGenerated   {
+  @JsonProperty("id")
+  private Long id = null;
+
   @JsonProperty("horarioInicio")
   private String horarioInicio = null;
 
   @JsonProperty("horarioFim")
   private String horarioFim = null;
+
+  public HorarioAulaGenerated id(Long id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * Get id
+   * @return id
+   **/
+  @Schema(description = "")
+
+    public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   public HorarioAulaGenerated horarioInicio(String horarioInicio) {
     this.horarioInicio = horarioInicio;
@@ -70,13 +92,14 @@ public class HorarioAulaGenerated   {
       return false;
     }
     HorarioAulaGenerated horarioAula = (HorarioAulaGenerated) o;
-    return Objects.equals(this.horarioInicio, horarioAula.horarioInicio) &&
+    return Objects.equals(this.id, horarioAula.id) &&
+        Objects.equals(this.horarioInicio, horarioAula.horarioInicio) &&
         Objects.equals(this.horarioFim, horarioAula.horarioFim);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(horarioInicio, horarioFim);
+    return Objects.hash(id, horarioInicio, horarioFim);
   }
 
   @Override
@@ -84,6 +107,7 @@ public class HorarioAulaGenerated   {
     StringBuilder sb = new StringBuilder();
     sb.append("class HorarioAulaGenerated {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    horarioInicio: ").append(toIndentedString(horarioInicio)).append("\n");
     sb.append("    horarioFim: ").append(toIndentedString(horarioFim)).append("\n");
     sb.append("}");

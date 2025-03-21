@@ -40,7 +40,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-19T15:52:55.998221102-03:00[America/Sao_Paulo]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-20T23:24:55.977796988-03:00[America/Sao_Paulo]")
 @Validated
 public interface AlunosApi {
 
@@ -74,7 +74,7 @@ public interface AlunosApi {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}", AlunoGenerated.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}", AlunoGenerated.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -99,7 +99,7 @@ public interface AlunosApi {
     @RequestMapping(value = "/aluno/{id}",
         produces = { "application/json" }, 
         method = RequestMethod.DELETE)
-    default ResponseEntity<Void> deleteAluno(@Parameter(in = ParameterIn.PATH, description = "", required=true, schema=@Schema()) @PathVariable("id") String id
+    default ResponseEntity<Void> deleteAluno(@Parameter(in = ParameterIn.PATH, description = "", required=true, schema=@Schema()) @PathVariable("id") Long id
 ) {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
         } else {
@@ -121,7 +121,7 @@ public interface AlunosApi {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("[ {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}, {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("[ {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}, {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -136,8 +136,8 @@ public interface AlunosApi {
 
     @Operation(summary = "Buscar aluno por CPF", description = "", tags={ "Alunos" })
     @ApiResponses(value = { 
-        @ApiResponse(responseCode = "200", description = "OK", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AlunoGenerated.class))),
-        
+        @ApiResponse(responseCode = "200", description = "OK", content = @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = AlunoGenerated.class)))),
+
         @ApiResponse(responseCode = "400", description = "Requisição inválida.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorResponseGenerated.class))),
         
         @ApiResponse(responseCode = "404", description = "Aluno não encontrado.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorResponseGenerated.class))),
@@ -146,12 +146,40 @@ public interface AlunosApi {
     @RequestMapping(value = "/aluno/cpf/{cpf}",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    default ResponseEntity<AlunoGenerated> getAlunoByCpf(@Parameter(in = ParameterIn.HEADER, description = "" ,required=true,schema=@Schema()) @RequestHeader(value="cpf", required=true) String cpf
+    default ResponseEntity<List<AlunoGenerated>> getAlunoByCpf(@Parameter(in = ParameterIn.PATH, description = "", required=true, schema=@Schema()) @PathVariable("cpf") String cpf
 ) {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}", AlunoGenerated.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("[ {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}, {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
+                } catch (IOException e) {
+                    log.error("Couldn't serialize response for content type application/json", e);
+                    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+                }
+            }
+        } else {
+            log.warn("ObjectMapper or HttpServletRequest not configured in default AlunosApi interface so no example is generated");
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    }
+
+
+    @Operation(summary = "Buscar aluno por Id", description = "", tags={ "Alunos" })
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "OK", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AlunoGenerated.class))),
+
+        @ApiResponse(responseCode = "404", description = "Aluno não encontrado.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorResponseGenerated.class))),
+
+        @ApiResponse(responseCode = "500", description = "Erro interno do servidor.", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorResponseGenerated.class))) })
+    @RequestMapping(value = "/aluno/{id}",
+        produces = { "application/json" },
+        method = RequestMethod.GET)
+    default ResponseEntity<AlunoGenerated> getAlunoById(@Parameter(in = ParameterIn.PATH, description = "", required=true, schema=@Schema()) @PathVariable("id") Long id
+) {
+        if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
+            if (getAcceptHeader().get().contains("application/json")) {
+                try {
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}", AlunoGenerated.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -176,12 +204,12 @@ public interface AlunosApi {
     @RequestMapping(value = "/aluno/nome/{nome}",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    default ResponseEntity<List<AlunoGenerated>> getAlunoByNome(@Parameter(in = ParameterIn.HEADER, description = "" ,required=true,schema=@Schema()) @RequestHeader(value="nome", required=true) String nome
+    default ResponseEntity<List<AlunoGenerated>> getAlunoByNome(@Parameter(in = ParameterIn.PATH, description = "", required=true, schema=@Schema()) @PathVariable("nome") String nome
 ) {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("[ {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}, {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("[ {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}, {\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n} ]", List.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -212,7 +240,7 @@ public interface AlunosApi {
         if(getObjectMapper().isPresent() && getAcceptHeader().isPresent()) {
             if (getAcceptHeader().get().contains("application/json")) {
                 try {
-                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : \"id\",\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}", AlunoGenerated.class), HttpStatus.NOT_IMPLEMENTED);
+                    return new ResponseEntity<>(getObjectMapper().get().readValue("{\n  \"telefone\" : \"telefone\",\n  \"endereco\" : {\n    \"cidade\" : \"cidade\",\n    \"complemento\" : \"complemento\",\n    \"bairro\" : \"bairro\",\n    \"numeroCasa\" : \"numeroCasa\",\n    \"cep\" : \"cep\",\n    \"rua\" : \"rua\"\n  },\n  \"cpf\" : \"cpf\",\n  \"nome\" : \"nome\",\n  \"id\" : 5,\n  \"sexo\" : \"MASCULINO\",\n  \"dataNascimento\" : \"2000-01-23\",\n  \"responsavel\" : [ {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  }, {\n    \"telefone\" : \"telefone\",\n    \"parentesco\" : \"parentesco\",\n    \"nome\" : \"nome\"\n  } ]\n}", AlunoGenerated.class), HttpStatus.NOT_IMPLEMENTED);
                 } catch (IOException e) {
                     log.error("Couldn't serialize response for content type application/json", e);
                     return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

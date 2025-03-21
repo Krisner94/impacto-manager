@@ -12,12 +12,34 @@ import jakarta.validation.constraints.*;
  * DiaDeAulaGenerated
  */
 @Validated
-@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-19T15:52:55.998221102-03:00[America/Sao_Paulo]")
+@jakarta.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2025-03-20T23:24:55.977796988-03:00[America/Sao_Paulo]")
 
 
 public class DiaDeAulaGenerated   {
+  @JsonProperty("id")
+  private Long id = null;
+
   @JsonProperty("dia")
   private String dia = null;
+
+  public DiaDeAulaGenerated id(Long id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * Get id
+   * @return id
+   **/
+  @Schema(description = "")
+
+    public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   public DiaDeAulaGenerated dia(String dia) {
     this.dia = dia;
@@ -48,12 +70,13 @@ public class DiaDeAulaGenerated   {
       return false;
     }
     DiaDeAulaGenerated diaDeAula = (DiaDeAulaGenerated) o;
-    return Objects.equals(this.dia, diaDeAula.dia);
+    return Objects.equals(this.id, diaDeAula.id) &&
+        Objects.equals(this.dia, diaDeAula.dia);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dia);
+    return Objects.hash(id, dia);
   }
 
   @Override
@@ -61,6 +84,7 @@ public class DiaDeAulaGenerated   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiaDeAulaGenerated {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    dia: ").append(toIndentedString(dia)).append("\n");
     sb.append("}");
     return sb.toString();
