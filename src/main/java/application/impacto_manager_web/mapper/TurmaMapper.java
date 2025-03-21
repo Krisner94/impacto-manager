@@ -1,6 +1,11 @@
 package application.impacto_manager_web.mapper;
 
-import application.impacto_manager_web.model.*;
+import application.impacto_manager_web.model.DiaDeAula;
+import application.impacto_manager_web.model.DiaDeAulaGenerated;
+import application.impacto_manager_web.model.HorarioAula;
+import application.impacto_manager_web.model.HorarioAulaGenerated;
+import application.impacto_manager_web.model.Turma;
+import application.impacto_manager_web.model.TurmaGenerated;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
