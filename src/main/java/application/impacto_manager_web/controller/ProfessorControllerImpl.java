@@ -1,9 +1,7 @@
 package application.impacto_manager_web.controller;
 
 import application.controller.ProfessorApi;
-import application.impacto_manager_web.exceptions.CustomException;
-import application.impacto_manager_web.exceptions.Error;
-import application.impacto_manager_web.mapper.ProfessorMapper;
+import application.impacto_manager_web.mapper.ConvertTo;
 import application.impacto_manager_web.model.Professor;
 import application.impacto_manager_web.model.ProfessorGenerated;
 import application.impacto_manager_web.service.ProfessorService;
@@ -27,43 +25,38 @@ public class ProfessorControllerImpl implements ProfessorApi {
     private final ProfessorService service;
 
     @Override
-    public ResponseEntity<ProfessorGenerated> createProfessor(ProfessorGenerated body) {
-        Professor saveProfessor = service.createProfessor(body);
-        ProfessorGenerated professorGenerated = ProfessorMapper.INSTANCE.toProfessorGenerated(saveProfessor);
-        return ResponseEntity.status(HttpStatus.CREATED).body(professorGenerated);
-    }
-
-    @Override
-    public ResponseEntity<Void> deleteProfessor(String id) {
-        try{
-            Professor professor = service.findById(id);
-            service.deleteProfessor(professor);
-        } catch (Exception e){
-            throw new CustomException(Professor.class).addError(
-                Error.builder()
-                    .title("Professor não encontrado")
-                    .message("O professor com o id " + id + " não foi encontrado")
-                    .httpStatus(String.valueOf(HttpStatus.NOT_FOUND.value()))
-                    .build()
-            );
-        }
-        return ResponseEntity.noContent().build();
-    }
-
-    @Override
     public ResponseEntity<List<ProfessorGenerated>> getAllProfessores() {
-        return ok(ProfessorMapper.INSTANCE.toProfessorGeneratedList(service.findAll()));
+        return ok(ConvertTo.convertToProfessorGeneratedList(service.findAll()));
+    }
+
+    @Override
+    public ResponseEntity<ProfessorGenerated> getProfessorById() {
+        Professor professor = new Professor();
+        return ok(ConvertTo.convertToProfessorGenerated(professor));
     }
 
     @Override
     public ResponseEntity<List<ProfessorGenerated>> getProfessorByNome(String nome) {
-        List<ProfessorGenerated> professorGeneratedList = ProfessorMapper.INSTANCE.toProfessorGeneratedList(service.findByNome(nome));
-        return ok(professorGeneratedList);
+        List<Professor> professor = service.findByNome(nome);
+        return ok(ConvertTo.convertToProfessorGeneratedList(professor));
     }
 
+    @Override
+    public ResponseEntity<ProfessorGenerated> createProfessor(ProfessorGenerated body) {
+        Professor professor = service.createProfessor(body);
+        return ResponseEntity.status(HttpStatus.CREATED).body(ConvertTo.convertToProfessorGenerated(professor));
+    }
 
     @Override
     public ResponseEntity<ProfessorGenerated> updateProfessor(ProfessorGenerated body) {
-        return ok(ProfessorMapper.INSTANCE.toProfessorGenerated(service.update(ProfessorMapper.INSTANCE.toProfessor(body))));
+        Professor professor = service.updateProfessor(body);
+        return ok(ConvertTo.convertToProfessorGenerated(professor));
+    }
+
+    @Override
+    public ResponseEntity<Void> deleteProfessor(Long id) {
+        Professor professor = service.findById(id);
+        service.deleteProfessor(professor);
+        return ResponseEntity.noContent().build();
     }
 }
