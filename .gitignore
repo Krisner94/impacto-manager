@@ -1,0 +1,39 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Logs
+*.log
+
+# Spring Boot
+spring.log
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.swp
+*.tmp
+*.bak
+*.old
+
+# Configurações específicas do sistema
+*.env
+*.local
+
+# Arquivos de build
+build/
+
+# Arquivos de cache
+.cache/
